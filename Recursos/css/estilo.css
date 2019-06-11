@@ -1,0 +1,535 @@
+    
+*{
+	font-family: 'Open sans';
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+body{
+	padding:0;
+	margin:0;
+	background: #DBDBDB;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+::selection {
+	background: transparent;
+  }
+
+a{
+	text-decoration: none;
+	color:#fff;
+}
+
+nav{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100px;
+	padding:10px 100px;
+	box-sizing: border-box;
+	transition: .5s;
+}
+
+nav.black{
+	background: rgba(0,0,0,.8);
+	height: 80px;
+	padding: 10px 50px;
+}
+
+nav .logo{
+	float:left;
+}
+
+nav .logo img{
+	height: 140px;
+	transition: .5s;
+}
+
+nav.black .logo img{
+	height: 80px;
+}
+
+nav ul{
+	float:right;
+	margin: 0;
+	padding: 0px;
+	display:flex;
+}
+
+nav ul li{
+	list-style: none;
+}
+
+nav ul li a{
+	line-height: 80px;
+	color:#FFFFFF;
+	padding: 5px 20px;
+	font: small-caps 100%/200% serif;
+	font-size: 19px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .5s;
+}
+
+nav.black ul li a{
+	color: #fff;
+	line-height: 60px;
+}
+
+nav ul li a.active, nav ul li a:hover{
+	color: #fff;
+	background: #ff8800;
+}
+
+section.sec1{
+	width:100%;
+	height: 100vh;
+	background: url("../img/31.jpg");
+	background-size: cover;
+}
+
+section.sec1 h1{
+		cursor: default;
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100px;
+		margin: auto;
+		display: block;
+		
+		-webkit-animation: bounce .3s ease infinite alternate;
+		
+		font-family: 'Erica One', cursive;
+		font-size: 80px;
+		color: #FFF;
+		text-align: center;
+		line-height: 100px;
+		text-shadow: 0 1px 0 #CCC,
+					 0 2px 0 #CCC,
+					 0 3px 0 #CCC,
+					 0 4px 0 #CCC,
+					 0 5px 0 #CCC,
+					 0 6px 0 transparent,
+					 0 7px 0 transparent,
+					 0 8px 0 transparent,
+					 0 9px 0 transparent,
+					 0 10px 10px rgba(0, 0, 0, .6);
+	  
+}
+
+@-webkit-keyframes bounce {
+	100% {
+	 top: -30px;
+	  
+	text-shadow:0 1px 0 #CCC,
+				0 2px 0 #CCC,
+				0 3px 0 #CCC,
+				0 4px 0 #CCC,
+				0 5px 0 #CCC,
+				0 6px 0 #CCC,
+				0 7px 0 #CCC,
+				0 8px 0 #CCC,
+				0 9px 0 #CCC,
+				0 30px 30px rgba(0, 0, 0, .3);
+	}
+  }
+
+section.sec2{
+	width:100%;
+	height: 100vh;
+	background: url("../img/29.jpeg");
+	background-size: cover;
+}
+
+section.sec3{
+	width:100%;
+	height: 100vh;
+	background: url("../img/30.jpg");
+	background-size: cover;
+}
+
+section.content{
+	padding: 100px;
+}
+
+section.content h1{
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+}
+
+section.content p{
+	margin: 20px 0 0;
+	padding: 0;
+	font-size: 1.1em;
+}
+
+/* Formulario de contacto ------------------------- */
+
+:focus{
+    outline: none;
+}
+
+.form_wrap{
+	width: 1050px;
+    height: 530px;
+    margin: 50px auto;
+    display: flex;
+
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact_info::before{
+    /* content: ''; */
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #4091EC;
+    opacity: 0.9;
+}
+
+.contact_info{
+    width: 38%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.info_title,
+.info_items{
+    position: relative;
+    z-index: 2;
+	color: rgb(7, 7, 7);
+	text-align: center;
+}
+
+.info_title{
+    margin-bottom: 60px;
+}
+
+.info_title span{
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_title span.p{
+    font-size: 100px;
+    text-align: center;
+}
+
+.info_title h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+.info_items p{
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info_items p:nth-child(1) span{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.info_items p:nth-child(2) span{
+    font-size: 50px;
+    margin-right: 15px;
+    margin-left: 4px;
+}
+
+/* Formulario de contacto*/
+form.form_contact{
+    width: 62%;
+    padding: 30px 40px;
+}
+
+form.form_contact h2{
+	font-size: 25px;
+	font-weight: 600;
+	color: #303030;
+	margin-bottom: 30px;
+}
+
+form.form_contact .user_info{
+    display: flex;
+    flex-direction: column;
+}
+
+form.form_contact label{
+    font-weight: 600;
+}
+
+form.form_contact input,
+form.form_contact textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+
+    font-family: 'Open sans';
+	color: #5A5A5A;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+form.form_contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+form.form_contact input[type="button"]{
+    width: 180px;
+	background: #4091EC;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+
+    align-self: flex-end;
+
+    color: #fff;
+	font-family: 'Open sans';
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+form.form_contact input[type="button"]:hover{
+    background: #3371B6;
+}
+
+/* Ventana de errores*/
+.modal_wrap{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje_modal{
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    width: 400px;
+    padding: 30px 20px 15px;
+}
+
+.mensaje_modal h3{
+    text-align: center;
+    font-family: 'Ubuntu';
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.mensaje_modal h3:after{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #C5C5C5;
+	margin: 10px 0px 15px;
+}
+
+.mensaje_modal p{
+    font-size: 16px;
+    color: #606060;
+}
+
+.mensaje_modal p:before{
+    content: "\f00d";
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #E25151;
+    margin-right: 8px;
+}
+
+#btnClose{
+    display: inline-block;
+	padding: 3px 10px;
+	margin-top: 10px;
+
+	background: #E25151;
+	color: #fff;
+	border: 2px solid #B14141;
+	cursor: pointer;
+
+	float: right;
+}
+
+/* Fin de formulario de contacto */
+
+.header{
+	background:#111;
+	color:#fff;
+	padding:30px;
+	text-align: center;
+	font-size:30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.menu{
+	padding:10px;
+	background: #111;
+}
+
+.menu a{
+	text-decoration: none;
+	color:#fff;
+	background:#111;
+	padding:10px;
+}
+
+.menu a:hover{
+	background: #000;
+}
+
+.cuerpo{
+	background: #eaeaea;
+	padding:30px;
+	min-height:440px;
+}
+
+.footer{
+	background:#000;
+	color:#aaa;
+	text-align:center;
+	font-size:10px;
+	padding:50px;
+}
+
+.centrar_login{
+	width:40%;
+	text-align: center;
+    padding-top:50px;
+    
+}
+
+.producto{
+	display:inline-block;
+	/* width:25%; */
+	width: 320px; height: 560px;
+	padding:10px;
+	background: rgba(0,0,0,0.05);
+	color:#333;
+	margin:5px;
+	text-align: center;
+}
+
+
+
+.img_producto{
+	text-align: center;
+	width:300px;
+	height: 300px;
+}
+
+.name_producto{
+	padding:10px;
+	color:#fff;
+	background:#ff8800;
+	font-size:18px;
+	font-weight: bold;
+}
+
+.name_talla{
+	padding:12px;
+	color:black;
+	text-align: center;
+	font-size:18px;
+	font-weight: bold;
+}
+
+.precio{
+	color:#00aa00;
+	padding:18px;
+	font-family: cursive;
+	font-size: 17px;
+}
+
+.subir{
+	position: relative;
+	bottom: 10px;
+}
+
+.imagen_carro{
+	width:70px;
+	height:70px;
+	border-radius: 1000px;
+}
+
+.text-green{
+	color:#0a0;
+}
+
+.carritot{
+	background:#ff8800;
+	color:white;
+	padding:10px;
+	border-radius:4px 4px 0px 0px;
+	position:fixed;
+	width:300px;
+	right:0px;
+	bottom:0px;
+	cursor:pointer;
+}
+
+.carritob{
+	background: #fff;
+	color:#333;
+	padding:10px;
+	width:300px;
+	position:fixed;
+	height:350px;
+	bottom:-350px;
+	right:0px;
+	overflow-y:scroll;
+}
+
+.cant{
+	width:50px;
+	display:inline-block;
+	padding:5px;
+}
+
